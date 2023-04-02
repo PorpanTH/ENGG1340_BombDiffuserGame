@@ -7,7 +7,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#include <thread>
+//#include <thread>
 
 using namespace std;
 
@@ -33,9 +33,7 @@ void displayClock()
 
     cout <<setfill(' ') <<setw(55) <<" -----------------------\n";
 }
-void timer()
-
-{
+void timer(){
 
     while (true) {
         displayClock();
@@ -60,16 +58,16 @@ void timer()
     }
 }
 
-void threadfunction(){
-    //Timer stuff here
-}
+//void threadfunction(){
+//    //Timer stuff here
+//}
 
-int main() {
+int symbol() {
 
     timer();
-    thread t1(threadfunction);
+//    thread t1(threadfunction);
     // your game here
-    t1.join();
+//    t1.join();
     srand(time(NULL));
 
     char two_d_list[3][7] = {
@@ -150,11 +148,10 @@ int main() {
             return 0;
         } else{
             cout <<"Wrong 5 seconds deducted"<<endl;
-            count==0;
+            count=0;
         }
     }
 
 
-    cout << endl;
-
+    return 0;
 }
