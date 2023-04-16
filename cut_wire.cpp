@@ -8,7 +8,7 @@
 #include<ctime>
 using namespace std;
 
-int check(string wires[],int n){
+int check_wires(string wires[],int n){
 //	Number of each color.
 	int yellow=0,white=0,black=0,red=0,blue=0;
 	for (int i=0;i<n;i++){
@@ -108,7 +108,7 @@ int cut_wire(){
 		cout<<i+1<<" "<<wire[color]<<"  ";
 		uncutted[i]=wire[color];
 	}
-	int correct_num=check(uncutted,rand_num_wires);
+	int correct_num=check_wires(uncutted,rand_num_wires);
 	cout<<"\n";
 	cout<<"Choose the NUMBER of wire you want to cut."<<endl;
 	cout<<"Number: ";
