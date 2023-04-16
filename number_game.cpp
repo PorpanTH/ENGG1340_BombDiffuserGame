@@ -228,7 +228,7 @@ void stage5(int array[],int key1,int key2, int key3, int key4){
                                cout << "Congratulations! You solved the puzzle!" << endl;
              }
 }
-int main(){
+int number_game(){
 	cout << "Welcome to the memory game!" << endl;
 	int array[4];
         bool temp = true;

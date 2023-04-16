@@ -8,13 +8,13 @@
 using namespace std;
 
 int select_main_word(string words[6][15], string &main_word){
-    int random = rand()%5;
-    main_word = words[random][0];
-    return random;
-}
+    int random = rand()%5; //generate a random number between 0 and 5
+    main_word = words[random][0]; //use the random number to select a random word from column 1 of the 2d array
+    return random; // return the word. this will be the "main_word". 
+} //the index of the main_word is returned as main_index, to makeit easier to code
     
 void select_words(string words[6][15], string &word1, string &word2, string &word3, string &word4, string &word5, string &word6){
-    int a[6] = {0,1,2,3,4,5};
+    int a[6] = {0,1,2,3,4,5}; 
     int b[14] = {1,2,3,4,5,6,7,8,9,10,11,12,13,14}; //where elements from a and b are in the form words[a][b]
     random_shuffle(a, a + 6); //the two arrays "a","b" with the indices are randomly shuffled
     random_shuffle(b, b + 13);
@@ -28,7 +28,7 @@ void select_words(string words[6][15], string &word1, string &word2, string &wor
 }
 
 void print_ui(string main_word, string word1, string word2, string word3, string word4, string word5, string word6){
-    cout << "┏━━━━━━━━━━━━━━━━┓" << endl;
+    cout << "┏━━━━━━━━━━━━━━━━┓" << endl; //a fancy way to display everything
     cout << "┃" << "     " << main_word << "      " << "┃" << endl;
     cout << "┗━━━━━━━━━━━━━━━━┛" << endl;
     cout << "┏━━━━━━━┓┏━━━━━━━┓" << endl;
@@ -44,10 +44,10 @@ void print_ui(string main_word, string word1, string word2, string word3, string
 
 
 string find_word(string words[6][15], int main_index, string main_word, string word1, string word2, string word3, string word4, string word5, string word6){
-    string answer;
-    for (int i = 0; i < 15; i++){       
-        if (words[main_index][i] == word1){
-            return word1;
+    string answer; //this function is used to find the correct answer for the puzzle. the correct answer is then stored in the variable answer
+    for (int i = 0; i < 15; i++){ //main_index allows to directly access the correct row from where      
+        if (words[main_index][i] == word1){ // to loop through every element of the corresponding row
+            return word1; //the first word to be matched is immediately returned
         }else if (words[main_index][i] == word2){
             return word2;
         }else if (words[main_index][i] == word3){
@@ -60,11 +60,11 @@ string find_word(string words[6][15], int main_index, string main_word, string w
             return word6;
         }
     }
-    return "";
+    return ""; //there was a compilation error, so this statement was added
 }
 
-bool check_word(string answer, string user_word){
-    return (answer == user_word);
+bool check_word(string answer, string user_word){ 
+    return (answer == user_word); //this function checks if the user input matches the correct answer
 }
 
 int word_game(){
@@ -77,18 +77,21 @@ int word_game(){
 
     srand((unsigned) time(NULL)); //generate a seed
 
-    main_index = select_main_word(words, main_word);
-    select_words(words, word1, word2, word3, word4, word5, word6);
-    answer = find_word(words, main_index, main_word, word1, word2, word3, word4, word5, word6);
-    print_ui(main_word, word1, word2, word3, word4, word5, word6);
-    cout << "Enter word: ";
-    cin >> user_word;
+    main_index = select_main_word(words, main_word); //index of the array corresponding to row of main_word
+    select_words(words, word1, word2, word3, word4, word5, word6); //randomly select 6 words from each row and store in 6 variables
+    answer = find_word(words, main_index, main_word, word1, word2, word3, word4, word5, word6); //find the correct answer for the puzzle
+    print_ui(main_word, word1, word2, word3, word4, word5, word6); //print the ui
+    cout << "Enter word: "; //prompt for ui
+    cin >> user_word; //store user input in user_word variable
     cout <<  endl;
-
-    if (check_word(answer, user_word)){
-        cout << "You Win!";
-    }else{
-        cout << "You Lose!";
+    
+    while (!check_word(answer, user_word)){ //keep on looping till user input is correct or till time runs out
+        cout << "Wrong answer! You loose 5 sec :(" << endl;
+        print_ui(main_word, word1, word2, word3, word4, word5, word6);
+        cout << "Enter word: ";
+        cin >> user_word;
+        cout <<  endl;
     }
-    return 1;
+    cout << "YOU WIN THIS ROUND!" << endl; 
+    return 1; //since function return type is int
 }

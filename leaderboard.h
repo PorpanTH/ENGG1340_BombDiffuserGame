@@ -7,12 +7,12 @@
 
 using namespace std;
 
-struct Entry{
+struct Entry{ //user-defined structure to make it easier to store leaderboard data
     string name;
     int score;
 };
-
-bool operator<(const Entry &a, const Entry &b){
+//to help in comparison - to arrange leaderboard based off the score
+inline bool operator<(const Entry &a, const Entry &b){
     return (a.score < b.score) ? true : false;
 }
 
