@@ -1,11 +1,13 @@
 // Wire Module
 
+
+#include "cut_wire.h"
 #include <iostream>
 #include <string>
 #include <iomanip>
 #include <unordered_map> 
-#include<cstdlib>
-#include<ctime>
+#include <cstdlib>
+#include <ctime>
 using namespace std;
 
 int check_wires(string wires[],int n){
