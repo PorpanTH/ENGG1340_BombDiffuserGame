@@ -116,14 +116,13 @@ int cut_wire(){
 	cout<<"Number: ";
 	int num=100;
 	cin>>num;
-	while (num<1||num>rand_num_wires){
-		cout<<"ERROR!!! You are wasting your time!\nChoose again.\n"<<endl;
-		cin>>num;
+	while (num=!correct_num){
+		cout<<"Oops!! ERROR!! TIME DEDUCT"<<endl;
+		// deduct time
+		cout<<"Try again.\nNumber: ";
+		cin<<num;
 	}
 	if (num==correct_num){
 		cout<<"Good job! You are safe for this part."<<endl;
-	}
-	else{
-		cout<<"Oops!! TIME DEDUCT";
 	}
 } 
