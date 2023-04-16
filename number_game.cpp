@@ -14,7 +14,9 @@ void printarray(int arr[]){
 void stage1(int array[]){
 	srand(time(0));
 	int i = (rand() % 4) + 1 ;
-	cout << "Stage 1: " <<  i << endl;
+	cout << "         ┏━━━┓" << endl;
+	cout << "Stage 1: " << "┃ " <<  i  << " ┃" << endl;
+	cout << "         ┗━━━┛" << endl;
 	int check;
 	if (i==1){
 		cin >> check;
@@ -58,7 +60,9 @@ void stage2(int array[],int key1){
 	srand(time(0));
 	int check;
 	int i = (rand() % 4) + 1;
-	cout << "Stage 2: " << i << endl;
+	cout << "         ┏━━━┓" << endl;
+        cout << "Stage 2: " << "┃ " <<  i  << " ┃" << endl;
+        cout << "         ┗━━━┛" << endl;
 	if (i==1){
                   cin >>  check;
 		  while (check != 4){
@@ -100,7 +104,9 @@ void stage3(int array[],int key1,int key2){
 	  srand(time(0));
 	  int check;
           int i = (rand() % 4) + 1;
-	  cout << "Stage 3: " << i << endl;
+	  cout << "         ┏━━━┓" << endl;
+          cout << "Stage 3: " << "┃ " <<  i  << " ┃" << endl;
+          cout << "         ┗━━━┛" << endl;
           if (i==1){
                     cin >>  check;
 		    while (check != key2){
@@ -142,7 +148,9 @@ void stage4(int array[],int key1,int key2, int key3){
 	    srand(time(0));
 	    int check;
             int i = (rand() % 4) + 1;
-	    cout << "Stage 4: " << i << endl;
+	    cout << "         ┏━━━┓" << endl;
+            cout << "Stage 4: " << "┃ " <<  i  << " ┃" << endl;
+            cout << "         ┗━━━┛" << endl;
             if (i==1){
                       cin >> check;
 		      while (check != key1){
@@ -184,7 +192,9 @@ void stage5(int array[],int key1,int key2, int key3, int key4){
 	      srand(time(0));
 	      int check;
               int i = (rand() % 4) + 1;
-	      cout << "Stage 5: " <<i << endl;
+	      cout << "         ┏━━━┓" << endl;
+              cout << "Stage 5: " << "┃ " <<  i  << " ┃" << endl;
+              cout << "         ┗━━━┛" << endl;
               if (i==1){
                         cin >> check;
 			while (check != key1){
