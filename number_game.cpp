@@ -1,17 +1,13 @@
 #include <iostream>
 #include <array>
 #include <cstdlib>
-using namespace std;
-void stage1(int array[]);
-void stage2(int array[],int key1);
-void stage3(int array[],int key1,int key2);
-void stage4(int array[],int key1,int key2, int key3);
-void stage5(int array[],int key1, int key2, int key3, int key4);
+#include "number_game.h"
 
+using namespace std;
 
 void printarray(int arr[]){
 	for (int x=0; x < 4; x++){
-		cout << arr[x] << ""; }
+		cout << arr[x] << " "; }
 	cout << endl;
 
 }
