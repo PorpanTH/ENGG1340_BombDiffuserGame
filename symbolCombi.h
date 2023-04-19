@@ -3,7 +3,7 @@
 #ifndef ENGG1340_BOMBDIFFUSERGAME_SYMBOLCOMBI_H
 #define ENGG1340_BOMBDIFFUSERGAME_SYMBOLCOMBI_H
 
-void symbol(void);
+int symbol(std::chrono::steady_clock::time_point& end_time);
 
 #endif //ENGG1340_BOMBDIFFUSERGAME_HEADERFILE_H
 
