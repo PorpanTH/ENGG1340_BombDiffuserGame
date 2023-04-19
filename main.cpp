@@ -11,7 +11,6 @@
 
 using namespace std;
 
-
 void start_game(vector <Entry> &info){
     cout << "loading save data...";
     this_thread::sleep_for(chrono::seconds(1));

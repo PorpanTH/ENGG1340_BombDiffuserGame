@@ -94,7 +94,8 @@ int check_wires(string wires[],int n){
 		}
 		// Otherwise, cut the 4th wire.
 		return 4;
-	} 
+	}
+    return 0;
 }
 
 int cut_wire(){
@@ -120,9 +121,10 @@ int cut_wire(){
 		cout<<"Oops!! ERROR!! TIME DEDUCT"<<endl;
 		// deduct time
 		cout<<"Try again.\nNumber: ";
-		cin<<num;
+		cin>>num;
 	}
 	if (num==correct_num){
 		cout<<"Good job! You are safe for this part."<<endl;
 	}
+    return 0;
 } 

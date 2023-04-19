@@ -9,5 +9,6 @@ void stage3(int array[],int key1,int key2);   //function for stage 1 which input
 void stage4(int array[],int key1,int key2, int key3);   //function for stage 1 which inputs an array, the first, the second and the third key
 void stage5(int array[],int key1, int key2, int key3, int key4);  //function for stage 1 which inputs an array, the first, the second, the third and the fourth key
 void printarray(int arr[]);
+int number_game();
 
 #endif

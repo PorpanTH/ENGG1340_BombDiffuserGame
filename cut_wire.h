@@ -1,5 +1,6 @@
 // cut_wire.h
-
+#include <string>
+using namespace std;
 #ifndef CUT_WIRE_H
 #define CUT_WIRE_H
 
