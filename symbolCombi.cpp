@@ -29,12 +29,10 @@ int symbol(chrono::steady_clock::time_point& end_time) {
                 {'3', '<', '#', 'Y', 'T', '6', 'H'}
         };
         int random_row = rand() % 4;
-        //    cout << random_row << endl;
         char list1[7]; // declare list1 as a one-dimensional character array
         int random_indices[4];
         for (int i = 0; i < 7; i++) {
             list1[i] = two_d_list[random_row][i];
-            //        cout << list1[i]<<",";
 
         }
         cout << endl;
@@ -52,7 +50,6 @@ int symbol(chrono::steady_clock::time_point& end_time) {
         cout << "Here is the jumbled keypads: " << endl;
         for (int i = 0; i < 4; i++) {
             output[i] = list1[random_indices[i]];
-//            cout << list1[random_indices[i]] << " ";
         }
         printarray(output);
         int n = sizeof(output) / sizeof(*output);
@@ -63,16 +60,12 @@ int symbol(chrono::steady_clock::time_point& end_time) {
         for (int i = 0; i < sizeof(list1); i++) {
             bool exists = std::find(output, output + n, list1[i]) != output + n;
             if (exists) {
-                //            cout << list1[i]<<" ";
-                //            cout << "Element found"<<endl;
                 correctAnswer[indexForCorrectAnswer] = list1[i];
-                //            cout<< correctAnswer[indexForCorrectAnswer]<<",";
                 indexForCorrectAnswer++;
 
 
             } else {
                 continue;
-                //            cout << "Element not found"<<endl;
             }
 
         }
@@ -84,14 +77,11 @@ int symbol(chrono::steady_clock::time_point& end_time) {
         while (chrono::steady_clock::now() < end_time && count != 5) {
             cout << "Your input: ";
             cin >> userInput;
-            //        cout<<"User input is:"<<userInput<<endl;
-            //        cout<<userInput.length()<<endl;
             for (int i = 0; i < userInput.length(); i++) {
                 //            cout<<"User index i: "<<userInput[i] << " correctAnswer : " << correctAnswer[i]<<endl;
                 if (userInput[i] == correctAnswer[i]) {
                     count++;
                 }
-                //            cout<<count<<endl;
             }
             if (count == 4) {
                 cout << "Congratualation!! Move on to the next puzzle" << endl;
