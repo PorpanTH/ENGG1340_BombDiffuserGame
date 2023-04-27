@@ -130,7 +130,7 @@ int cut_wire(chrono::steady_clock::time_point& end_time){
             end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
-
+            cout<<endl;
             cout << "Try again.\nNumber: ";
             cin >> num;
 
@@ -146,4 +146,3 @@ int cut_wire(chrono::steady_clock::time_point& end_time){
     }
     return 0;
 }
-

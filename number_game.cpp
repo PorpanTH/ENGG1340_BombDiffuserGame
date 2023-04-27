@@ -33,11 +33,11 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
             if(end_time< chrono::steady_clock::now()){
                 return 0;
             }
-            if (check == array[1]){
-                stage2(array,array[1], end_time);
-            }
-        }
 
+        }
+        if (check == array[1]){
+            stage2(array,array[1], end_time);
+        }
 
 
     }
@@ -52,9 +52,10 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
             if(end_time< chrono::steady_clock::now()){
                 return 0;
             }
-            if (check == array[1]){
-                stage2(array,array[1], end_time);
-            }
+
+        }
+        if (check == array[1]){
+            stage2(array,array[1], end_time);
         }
 
 
@@ -70,9 +71,10 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
             if(end_time< chrono::steady_clock::now()){
                 return 0;
             }
-            if (check == array[2]){
-                stage2(array,array[2],end_time);
-            }
+
+        }
+        if (check == array[2]){
+            stage2(array,array[2],end_time);
         }
 
     }
@@ -87,10 +89,9 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
             if(end_time< chrono::steady_clock::now()){
                 return 0;
             }
-            if (check == array[3]){
-                stage2(array,array[3], end_time);
-            }
-
+        }
+        if (check == array[3]){
+            stage2(array,array[3], end_time);
         }
 
     }
@@ -118,9 +119,10 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == 4){
-                stage3(array,key1,4, end_time);
             }
+        }
+        if (check == 4){
+            stage3(array,key1,4, end_time);
         }
     }
     if (i==2){
@@ -133,9 +135,10 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key1){
-                stage3(array,key1,key1, end_time);
             }
+        }
+        if (check == key1){
+            stage3(array,key1,key1, end_time);
         }
 
 
@@ -150,9 +153,10 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == array[0]){
-                stage3(array,key1,array[0],end_time);
             }
+        }
+        if (check == array[0]){
+            stage3(array,key1,array[0],end_time);
         }
 
     }
@@ -167,10 +171,11 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key1){
-                stage3(array,key1,key1, end_time);
-            }}
-
+            }
+        }
+        if (check == key1){
+            stage3(array,key1,key1, end_time);
+        }
 
     }
     return 1;
@@ -196,9 +201,11 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key2){
-                stage4(array,key1,key2,key2, end_time);
-            }}
+            }
+        }
+        if (check == key2){
+            stage4(array,key1,key2,key2, end_time);
+        }
 
 
     }
@@ -212,9 +219,11 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key1){
-                stage4(array,key1,key2,key1, end_time);
-            }}
+            }
+        }
+        if (check == key1){
+            stage4(array,key1,key2,key1, end_time);
+        }
 
 
     }
@@ -228,9 +237,11 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == array[2]){
-                stage4(array,key1,key2,array[2], end_time);
-            }}
+            }
+        }
+        if (check == array[2]){
+            stage4(array,key1,key2,array[2], end_time);
+        }
 
 
     }
@@ -244,9 +255,11 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == 4){
-                stage4(array,key1,key2,4, end_time);
-            }}
+            }
+        }
+        if (check == 4){
+            stage4(array,key1,key2,4, end_time);
+        }
 
 
     }
@@ -273,9 +286,11 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key1){
-                stage5(array,key1,key2,key3,key1, end_time);
-            }}
+            }
+        }
+        if (check == key1){
+            stage5(array,key1,key2,key3,key1, end_time);
+        }
 
 
     }
@@ -289,9 +304,11 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == array[0]){
-                stage5(array,key1,key2,key3,array[0], end_time);
-            }}
+            }
+        }
+        if (check == array[0]){
+            stage5(array,key1,key2,key3,array[0], end_time);
+        }
 
 
     }
@@ -305,9 +322,11 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key2){
-                stage5(array,key1,key2,key3,key2, end_time);
-            }}
+            }
+        }
+        if (check == key2){
+            stage5(array,key1,key2,key3,key2, end_time);
+        }
 
 
     }
@@ -321,9 +340,11 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key2){
-                stage5(array,key1,key2,key3,key2, end_time);
-            }}
+            }
+        }
+        if (check == key2){
+            stage5(array,key1,key2,key3,key2, end_time);
+        }
 
 
     }
@@ -350,10 +371,12 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key1){
-                cout << "Congratulations! You solved the puzzle!" << endl;
-                return 1;
-            }}
+            }
+        }
+        if (check == key1){
+            cout << "Congratulations! You solved the puzzle!" << endl;
+            return 1;
+        }
 
 
     }
@@ -367,10 +390,12 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key2){
-                cout << "Congratulations! You solved the puzzle!" << endl;
-                return 1;
-            }}
+            }
+        }
+        if (check == key2){
+            cout << "Congratulations! You solved the puzzle!" << endl;
+            return 1;
+        }
 
 
     }
@@ -384,10 +409,12 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
                 return 0;
-            }if (check == key4){
-                cout << "Congratulations! You solved the puzzle!" << endl;
-                return 1;
-            }}
+            }
+        }
+        if (check == key4){
+            cout << "Congratulations! You solved the puzzle!" << endl;
+            return 1;
+        }
 
 
     }
@@ -402,15 +429,12 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
             if(end_time< chrono::steady_clock::now()){
                 return 0;
             }
-            if (check == key3){
-                cout << "Congratulations! You solved the puzzle!" << endl;
-                auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-                cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
-                cout << endl;
-                return 1;
-            }
-        }
 
+        }
+        if (check == key3){
+            cout << "Congratulations! You solved the puzzle!" << endl;
+            return 1;
+        }
 
     }
     return 1;

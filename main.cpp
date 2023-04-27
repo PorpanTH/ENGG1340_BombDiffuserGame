@@ -37,38 +37,42 @@ int main(){
 
     start_game(info);
     auto start_time = chrono::steady_clock::now();
-    auto end_time = start_time + chrono::seconds(60);
+    auto end_time = start_time + chrono::seconds(120);
     while (chrono::steady_clock::now() < end_time) {
         this_thread::sleep_for(chrono::milliseconds(10));
         //add game implementation
         // word_game();
         //number_game();
         //cut_wire();
-        if (symbol(end_time) == 0) {
-            // Time's up, terminate the program
-            cout << "GAME OVER" << endl;
-            cout << "You have run out of time." << endl;
-            return 1;
-        }
+
         if (number_game(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
             cout << "You have run out of time." << endl;
             return 1;
         }
-
+        cout << "************************************" << endl;
+        if (symbol(end_time) == 0) {
+            // Time's up, terminate the program
+            cout << "GAME OVER" << endl;
+            cout << "You have run out of time." << endl;
+            return 1;
+        }
+        cout << "************************************" << endl;
         if (word_game(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
             cout << "You have run out of time." << endl;
             return 1;
         }
+        cout << "************************************" << endl;
         if (cut_wire(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
             cout << "You have run out of time." << endl;
             return 1;
         }
+        cout << "************************************" << endl;
         auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
         score=remaining_time.count();
         end_game(info, score);
