@@ -1,23 +1,23 @@
 # ENGG1340_BombDiffuserGame
 Group No.: 19
+
 Group members:
-Topic:
-Link to repo:
-Link to video (if any):
-
-
-Team Members:
 Na-siam Sa-nguannam (UID: 3035979406)
 Wang Zihan
 Sadiq Salam
 Lakindu
+
+Topic: Bomb Diffuser Game 
+
+*** inspired by "Keep Talking and Nobody Explodes" developed by Canadian studio Steel Crate Games ***
+
 
 Description:
 
 
 
 Game Rules:
-
+120seconds, 5seconds deducted after each incorrect input
 
 Features Implemented:
 
