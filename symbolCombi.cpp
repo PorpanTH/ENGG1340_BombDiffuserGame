@@ -5,6 +5,7 @@
 #include <stdlib.h>
 #include "time.h"
 #include "symbolCombi.h"
+#include <vector>
 
 using namespace std;
 
@@ -22,15 +23,15 @@ int symbol(chrono::steady_clock::time_point& end_time) {
     while (chrono::steady_clock::now() < end_time) {
         srand(time(NULL));
 
-        char two_d_list[4][7] = {   //two-dimensional array to contain the symbols
+        vector<vector<char>> two_d_list = {   //two-dimensional array to contain the symbols
                 {'A', '!', '$', '?', 'B', '&', '@'},
                 {'b', 'M', '=', '>', '5', 'U', 'x'},
                 {'}', 'W', 'Z', 'S', 'i', '%', '+'},
                 {'3', '<', '#', 'Y', 'T', '6', 'H'}
         };
         int random_row = rand() % 4;  //random function to get the row number
-        char list1[7]; // declare list1 as a one-dimensional character array
-        int random_indices[4]; 
+        vector<char> list1 = two_d_list[random_row]; // declare list1 as a one-dimensional character vector
+        int random_indices[4];
         for (int i = 0; i < 7; i++) {
             list1[i] = two_d_list[random_row][i];       
 
@@ -45,20 +46,20 @@ int symbol(chrono::steady_clock::time_point& end_time) {
                      index == random_indices[3]);
             random_indices[i] = index;
         }
-        char output[4];
+        vector<char> output(4);
         cout << "This is the SYMBOLS COMBINATION LOCK game" << endl;
         cout << "Here is the jumbled keypads: " << endl;
         for (int i = 0; i < 4; i++) {
             output[i] = list1[random_indices[i]];
         }
-        printarray(output);
-        int n = sizeof(output) / sizeof(*output);
+        printarray(output.data());
+        int n = output.size();
 
-        char correctAnswer[4];
+        vector<char> correctAnswer(4);
         cout << endl;
         int indexForCorrectAnswer = 0;
         for (int i = 0; i < sizeof(list1); i++) {
-            bool exists = std::find(output, output + n, list1[i]) != output + n;
+            bool exists = find(output.begin(), output.end(), list1[i]) != output.end();
             if (exists) {
                 correctAnswer[indexForCorrectAnswer] = list1[i];
                 indexForCorrectAnswer++;
