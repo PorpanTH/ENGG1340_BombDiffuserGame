@@ -10,7 +10,7 @@ using namespace std;
 
 
 
-void printarray(char arr[]){
+void printarray(char arr[]){                            //function to print array
     cout << "┏━━━┓┏━━━┓┏━━━┓┏━━━┓" << endl;
     cout << "┃" << " " << arr[0] << " " << "┃" << "┃" << " " << arr[1] << " " << "┃" << "┃" << " " << arr[2] << " " << "┃"  << "┃" << " " << arr[3] << " " << "┃" << endl;
     cout << "┗━━━┛┗━━━┛┗━━━┛┗━━━┛" << endl;
@@ -22,17 +22,17 @@ int symbol(chrono::steady_clock::time_point& end_time) {
     while (chrono::steady_clock::now() < end_time) {
         srand(time(NULL));
 
-        char two_d_list[4][7] = {
+        char two_d_list[4][7] = {   //two-dimensional array to contain the symbols
                 {'A', '!', '$', '?', 'B', '&', '@'},
                 {'b', 'M', '=', '>', '5', 'U', 'x'},
                 {'}', 'W', 'Z', 'S', 'i', '%', '+'},
                 {'3', '<', '#', 'Y', 'T', '6', 'H'}
         };
-        int random_row = rand() % 4;
+        int random_row = rand() % 4;  //random function to get the row number
         char list1[7]; // declare list1 as a one-dimensional character array
-        int random_indices[4];
+        int random_indices[4]; 
         for (int i = 0; i < 7; i++) {
-            list1[i] = two_d_list[random_row][i];
+            list1[i] = two_d_list[random_row][i];       
 
         }
         cout << endl;
@@ -40,13 +40,13 @@ int symbol(chrono::steady_clock::time_point& end_time) {
         for (int i = 0; i < 4; i++) {
             int index;
             do {
-                index = rand() % 7;
+                index = rand() % 7; //random index from 0-7
             } while (index == random_indices[0] || index == random_indices[1] || index == random_indices[2] ||
                      index == random_indices[3]);
             random_indices[i] = index;
         }
         char output[4];
-        cout << "This it the SYMBOLS COMBINATION LOCK game" << endl;
+        cout << "This is the SYMBOLS COMBINATION LOCK game" << endl;
         cout << "Here is the jumbled keypads: " << endl;
         for (int i = 0; i < 4; i++) {
             output[i] = list1[random_indices[i]];
