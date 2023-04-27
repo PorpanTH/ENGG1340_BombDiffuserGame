@@ -24,3 +24,7 @@ Features Implemented:
 
 
 Compilation and Execution instruction:
+
+$make game
+$./game
+
