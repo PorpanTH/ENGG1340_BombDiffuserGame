@@ -99,7 +99,7 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){    //functi
 
 }
 
-int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
+int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){ //function for stage 2
     for (int i=0; i<100;i++){
         cout << endl; }
     printarray(array);
@@ -111,77 +111,78 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
     cout << "         ┗━━━┛" << endl;
     if (i==1){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != 4){
+        while (chrono::steady_clock::now() < end_time && check != 4){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl; //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == 4){
-            stage3(array,key1,4, end_time);
+            stage3(array,key1,4, end_time); //correct answer is reached, move on to stage 3
         }
     }
     if (i==2){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != key1){
+        while (chrono::steady_clock::now() < end_time && check != key1){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl; //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
+
             }
         }
         if (check == key1){
-            stage3(array,key1,key1, end_time);
+            stage3(array,key1,key1, end_time); //correct answer is reached, move on to stage 3
         }
 
 
     }
     if (i==3){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != array[0]){
+        while (chrono::steady_clock::now() < end_time && check != array[0]){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == array[0]){
-            stage3(array,key1,array[0],end_time);
+            stage3(array,key1,array[0],end_time); //correct answer is reached, move on to stage 3
         }
 
     }
     if (i==4){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key1){
+        while (chrono::steady_clock::now() < end_time && check != key1){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
 
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == key1){
-            stage3(array,key1,key1, end_time);
+            stage3(array,key1,key1, end_time); //correct answer is reached, move on to stage 3
         }
 
     }
     return 1;
 }
 
-int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_time){
+int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_time){ //function for stage 3
     for (int i=0; i<100;i++){
         cout << endl; }
     printarray(array);
@@ -193,72 +194,72 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     cout << "         ┗━━━┛" << endl;
     if (i==1){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != key2){
+        while (chrono::steady_clock::now() < end_time && check != key2){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == key2){
-            stage4(array,key1,key2,key2, end_time);
+            stage4(array,key1,key2,key2, end_time); //correct answer is reached, move on to stage 4
         }
 
 
     }
     if (i==2){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key1){
+        while (chrono::steady_clock::now() < end_time && check != key1){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == key1){
-            stage4(array,key1,key2,key1, end_time);
+            stage4(array,key1,key2,key1, end_time); //correct answer is reached, move on to stage 4
         }
 
 
     }
     if (i==3){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != array[2]){
+        while (chrono::steady_clock::now() < end_time && check != array[2]){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == array[2]){
-            stage4(array,key1,key2,array[2], end_time);
+            stage4(array,key1,key2,array[2], end_time); //correct answer is reached, move on to stage 4
         }
 
 
     }
     if (i==4){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != 4){
+        while (chrono::steady_clock::now() < end_time && check != 4){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
         if (check == 4){
-            stage4(array,key1,key2,4, end_time);
+            stage4(array,key1,key2,4, end_time); //correct answer is reached, move on to stage 4
         }
 
 
@@ -266,7 +267,7 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     return 1;
 }
 
-int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_point& end_time){
+int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_point& end_time){ //function for stage 4
     for (int i=0; i<100;i++){
         cout << endl; }
     printarray(array);
@@ -278,72 +279,72 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     cout << "         ┗━━━┛" << endl;
     if (i==1){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key1){
+        while (chrono::steady_clock::now() < end_time && check != key1){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0;//end game if time runs out
             }
         }
         if (check == key1){
-            stage5(array,key1,key2,key3,key1, end_time);
-        }
+            stage5(array,key1,key2,key3,key1, end_time); //correct answer is reached, move on to stage 5
+        } 
 
 
     }
     if (i==2){
         cin >>  check;
-        while (chrono::steady_clock::now() < end_time && check != array[0]){
+        while (chrono::steady_clock::now() < end_time && check != array[0]){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0;//end game if time runs out
             }
         }
         if (check == array[0]){
-            stage5(array,key1,key2,key3,array[0], end_time);
+            stage5(array,key1,key2,key3,array[0], end_time); //correct answer is reached, move on to stage 5
         }
 
 
     }
     if (i==3){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key2){
+        while (chrono::steady_clock::now() < end_time && check != key2){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0;//end game if time runs out
             }
         }
         if (check == key2){
-            stage5(array,key1,key2,key3,key2, end_time);
+            stage5(array,key1,key2,key3,key2, end_time); //correct answer is reached, move on to stage 5
         }
 
 
     }
     if (i==4){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time &&  check != key2){
+        while (chrono::steady_clock::now() < end_time &&  check != key2){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0;//end game if time runs out
             }
         }
         if (check == key2){
-            stage5(array,key1,key2,key3,key2, end_time);
+            stage5(array,key1,key2,key3,key2, end_time); //correct answer is reached, move on to stage 5
         }
 
 
@@ -351,7 +352,7 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     return 1;
 }
 
-int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clock::time_point& end_time){
+int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clock::time_point& end_time){ //function for stage 5
     for (int i=0; i<100;i++){
         cout << endl; }
     printarray(array);
@@ -363,18 +364,18 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     cout << "         ┗━━━┛" << endl;
     if (i==1){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time &&  check != key1){
+        while (chrono::steady_clock::now() < end_time &&  check != key1){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
-        if (check == key1){
-            cout << "Congratulations! You solved the puzzle!" << endl;
+        if (check == key1){ //correct answer is reached, module done!
+            cout << "Congratulations! You solved the puzzle!" << endl; 
             return 1;
         }
 
@@ -382,17 +383,17 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     }
     if (i==2){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key2){
+        while (chrono::steady_clock::now() < end_time && check != key2){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
-        if (check == key2){
+        if (check == key2){ //correct answer is reached, module done
             cout << "Congratulations! You solved the puzzle!" << endl;
             return 1;
         }
@@ -401,17 +402,17 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     }
     if (i==3){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key4){
+        while (chrono::steady_clock::now() < end_time && check != key4){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
         }
-        if (check == key4){
+        if (check == key4){ //correct answer is reached, module done
             cout << "Congratulations! You solved the puzzle!" << endl;
             return 1;
         }
@@ -420,18 +421,18 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     }
     if (i==4){
         cin >> check;
-        while (chrono::steady_clock::now() < end_time && check != key3){
+        while (chrono::steady_clock::now() < end_time && check != key3){ //run the loop till the correct answer is reached
             cout << "Wrong 5 seconds deducted" << endl;
-            end_time -= chrono::seconds(5);
+            end_time -= chrono::seconds(5); //deduct 5 seconds for wrong answer
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
-            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;  //display time remaining
             cin >> check;
             if(end_time< chrono::steady_clock::now()){
-                return 0;
+                return 0; //end game if time runs out
             }
 
         }
-        if (check == key3){
+        if (check == key3){ //correct answer is reached, module done
             cout << "Congratulations! You solved the puzzle!" << endl;
             return 1;
         }
