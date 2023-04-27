@@ -10,8 +10,6 @@
 #include "time.h"
 
 using namespace std;
-//std::chrono::time_point<std::chrono::steady_clock> start_time;
-//std::chrono::time_point<std::chrono::steady_clock> end_time;
 
 void start_game(vector <Entry> &info){
     cout << "loading save data...";
@@ -46,24 +44,29 @@ int main(){
         // word_game();
         //number_game();
         //cut_wire();
-        if (number_game(end_time) == 0) {
-            // Time's up, terminate the program
-            cout << "GAME OVER" << endl;
-            return 1;
-        }
         if (symbol(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
+            cout << "You have run out of time." << endl;
             return 1;
         }
+        if (number_game(end_time) == 0) {
+            // Time's up, terminate the program
+            cout << "GAME OVER" << endl;
+            cout << "You have run out of time." << endl;
+            return 1;
+        }
+
         if (word_game(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
+            cout << "You have run out of time." << endl;
             return 1;
         }
         if (cut_wire(end_time) == 0) {
             // Time's up, terminate the program
             cout << "GAME OVER" << endl;
+            cout << "You have run out of time." << endl;
             return 1;
         }
         auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());

@@ -133,11 +133,16 @@ int cut_wire(chrono::steady_clock::time_point& end_time){
 
             cout << "Try again.\nNumber: ";
             cin >> num;
+
         }
-        if (num == correct_num) {
-            cout << "Good job! You are safe for this part." << endl;
+        if (chrono::steady_clock::now() < end_time) {
+            cout << "Good job!" << endl;
+            auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+            cout << endl;
             return 1;
         }
+
     }
     return 0;
 }

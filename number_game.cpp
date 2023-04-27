@@ -24,7 +24,8 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
     if (i==1){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != array[1]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -43,7 +44,8 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
     if (i==2){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != array[1]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -60,7 +62,8 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
     if (i==3){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != array[2]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+                end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -76,7 +79,8 @@ int stage1(int array[], chrono::steady_clock::time_point& end_time){
     if (i==4){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != array[3]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+                end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -107,7 +111,8 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
     if (i==1){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != 4){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -115,14 +120,14 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
                 return 0;
             }if (check == 4){
                 stage3(array,key1,4, end_time);
-            }}
-
-
+            }
+        }
     }
     if (i==2){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != key1){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -138,7 +143,8 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
     if (i==3){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != array[0]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -153,7 +159,8 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){
     if (i==4){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key1){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
 
@@ -182,7 +189,8 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     if (i==1){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != key2){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -197,7 +205,8 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     if (i==2){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key1){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -212,7 +221,8 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     if (i==3){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != array[2]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -227,7 +237,8 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     if (i==4){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != 4){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -255,7 +266,8 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     if (i==1){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key1){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -270,7 +282,8 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     if (i==2){
         cin >>  check;
         while (chrono::steady_clock::now() < end_time && check != array[0]){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -285,7 +298,8 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     if (i==3){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key2){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -300,7 +314,8 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     if (i==4){
         cin >> check;
         while (chrono::steady_clock::now() < end_time &&  check != key2){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -328,7 +343,8 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     if (i==1){
         cin >> check;
         while (chrono::steady_clock::now() < end_time &&  check != key1){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -344,7 +360,8 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     if (i==2){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key2){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -360,7 +377,8 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     if (i==3){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key4){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -376,7 +394,8 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     if (i==4){
         cin >> check;
         while (chrono::steady_clock::now() < end_time && check != key3){
-            cout << "Wrong Input. Try Again!" << endl;
+            cout << "Wrong 5 seconds deducted" << endl;
+            end_time -= chrono::seconds(5);
             auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
             cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             cin >> check;
@@ -385,6 +404,9 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
             }
             if (check == key3){
                 cout << "Congratulations! You solved the puzzle!" << endl;
+                auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
+                cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+                cout << endl;
                 return 1;
             }
         }

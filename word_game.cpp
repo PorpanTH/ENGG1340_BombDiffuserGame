@@ -105,6 +105,8 @@ int word_game(chrono::steady_clock::time_point& end_time){
         if(chrono::steady_clock::now() < end_time){
 
             cout << "YOU WIN THIS ROUND!" << endl;
+            auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
+            cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
             return 1; //since function return type is int
         }
     }

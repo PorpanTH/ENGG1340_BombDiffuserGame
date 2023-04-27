@@ -9,6 +9,7 @@
 using namespace std;
 
 
+
 void printarray(char arr[]){
     cout << "┏━━━┓┏━━━┓┏━━━┓┏━━━┓" << endl;
     cout << "┃" << " " << arr[0] << " " << "┃" << "┃" << " " << arr[1] << " " << "┃" << "┃" << " " << arr[2] << " " << "┃"  << "┃" << " " << arr[3] << " " << "┃" << endl;
@@ -21,18 +22,13 @@ int symbol(chrono::steady_clock::time_point& end_time) {
     while (chrono::steady_clock::now() < end_time) {
         srand(time(NULL));
 
-        char two_d_list[3][7] = {
-                {'a', 'b', 'c', 'd', 'e', '!', '@'},
-                {'f', 'i', 'j', 'k', 'l', '#', '$'},
-                {'m', 'n', 'o', 'p', 'q', '%', '^'}
+        char two_d_list[4][7] = {
+                {'A', '!', '$', '?', 'B', '&', '@'},
+                {'b', 'M', '=', '>', '5', 'U', 'x'},
+                {'}', 'W', 'Z', 'S', 'i', '%', '+'},
+                {'3', '<', '#', 'Y', 'T', '6', 'H'}
         };
-        cout << "THIS IS A COMBINATION LOCK" << endl;
-//        cout << "Only one row below has all four of the symbols from the keypad." << endl;
-//        cout << "'a', 'b', 'c', 'd', 'e', '!', '@'" << endl;
-//        cout << "'f', 'i', 'j', 'k', 'l', '#', '$'" << endl;
-//        cout << "'m', 'n', 'o', 'p', 'q','%','^'" << endl;
-//        cout << "Type the four symbols in the order their symbols appear from left to right within that row." << endl;
-        int random_row = rand() % 3;
+        int random_row = rand() % 4;
         //    cout << random_row << endl;
         char list1[7]; // declare list1 as a one-dimensional character array
         int random_indices[4];
@@ -52,6 +48,7 @@ int symbol(chrono::steady_clock::time_point& end_time) {
             random_indices[i] = index;
         }
         char output[4];
+        cout << "This it the SYMBOLS COMBINATION LOCK game" << endl;
         cout << "Here is the jumbled keypads: " << endl;
         for (int i = 0; i < 4; i++) {
             output[i] = list1[random_indices[i]];
@@ -98,14 +95,16 @@ int symbol(chrono::steady_clock::time_point& end_time) {
             }
             if (count == 4) {
                 cout << "Congratualation!! Move on to the next puzzle" << endl;
-
+                auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
+                cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
+                cout<< endl;
                 return 1;
             } else {
                 cout << "Wrong 5 seconds deducted" << endl;
                 end_time -= chrono::seconds(5);
                 auto remaining_time = chrono::duration_cast<chrono::seconds>(end_time - chrono::steady_clock::now());
                 cout << "Time remaining: " << remaining_time.count() << " seconds" << endl;
-
+                cout << endl;
                 count = 0;
 
             }
