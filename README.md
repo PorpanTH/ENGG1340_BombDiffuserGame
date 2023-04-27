@@ -39,8 +39,6 @@ Game Rules:
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0004.jpg)
 
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0005.jpg)
-
-
 Features Implemented:
 1.	**Multiple puzzle modules**: The game includes four different puzzle modules, each with its own set of instructions and rules.
 2.	**Randomization**: Each time the game is played, the puzzle modules are randomly composited in a new way, 
