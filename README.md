@@ -27,7 +27,9 @@ so you need to be careful about the new situation that you never met.
 
 Game Rules:
 120seconds, 5seconds deducted after each incorrect input
+
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/Warriors.png)
+
 Features Implemented:
 
 
