@@ -15,7 +15,7 @@ void printarray(int arr[]){ //function to print the array
 
 int stage1(int array[], chrono::steady_clock::time_point& end_time){    //function for the stage 1 of the program
     srand(time(0));
-    int i = (rand() % 4) + 1 ;  //get a random number from 1-4
+    int i = (rand() % 4) + 1 ;  //get the display number from 1-4
     cout << "         ┏━━━┓" << endl;
     cout << "Stage 1: " << "┃ " <<  i  << " ┃" << endl; //print the stage 1 display number
     cout << "         ┗━━━┛" << endl;
@@ -105,7 +105,7 @@ int stage2(int array[],int key1, chrono::steady_clock::time_point& end_time){ //
     printarray(array);
     srand(time(0));
     int check;
-    int i = (rand() % 4) + 1;
+    int i = (rand() % 4) + 1; //get the display number from 1-4
     cout << "         ┏━━━┓" << endl;
     cout << "Stage 2: " << "┃ " <<  i  << " ┃" << endl;
     cout << "         ┗━━━┛" << endl;
@@ -188,7 +188,7 @@ int stage3(int array[],int key1,int key2, chrono::steady_clock::time_point& end_
     printarray(array);
     srand(time(0));
     int check;
-    int i = (rand() % 4) + 1;
+    int i = (rand() % 4) + 1;   //get the display number from 1-4
     cout << "         ┏━━━┓" << endl;
     cout << "Stage 3: " << "┃ " <<  i  << " ┃" << endl;
     cout << "         ┗━━━┛" << endl;
@@ -273,7 +273,7 @@ int stage4(int array[],int key1,int key2, int key3, chrono::steady_clock::time_p
     printarray(array);
     srand(time(0));
     int check;
-    int i = (rand() % 4) + 1;
+    int i = (rand() % 4) + 1;   //get the display number from 1-4
     cout << "         ┏━━━┓" << endl;
     cout << "Stage 4: " << "┃ " <<  i  << " ┃" << endl;
     cout << "         ┗━━━┛" << endl;
@@ -358,7 +358,7 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     printarray(array);
     srand(time(0));
     int check;
-    int i = (rand() % 4) + 1;
+    int i = (rand() % 4) + 1;   //get the display number from 1-4
     cout << "         ┏━━━┓" << endl;
     cout << "Stage 5: " << "┃ " <<  i  << " ┃" << endl;
     cout << "         ┗━━━┛" << endl;
@@ -440,14 +440,14 @@ int stage5(int array[],int key1,int key2, int key3, int key4, chrono::steady_clo
     }
     return 1;
 }
-int number_game(chrono::steady_clock::time_point& end_time){
+int number_game(chrono::steady_clock::time_point& end_time){    //the main function for the module
     cout << "Welcome to the memory game!" << endl;
     int array[4];
     bool temp = true;
     int x = 0;
     srand(time(0));
     while (x < 4){
-        int i =  (rand() % 4) + 1 ;
+        int i =  (rand() % 4) + 1 ;    //making the main array
         if (array[0]!=i && array[1]!=i && array[2]!=i && array[3]!=i){
             array[x] = i;
             x++; }
@@ -455,7 +455,6 @@ int number_game(chrono::steady_clock::time_point& end_time){
     }
 
     printarray(array);
-//    stage1(array, end_time);
     if(stage1(array, end_time)){
         return 1;
     }
