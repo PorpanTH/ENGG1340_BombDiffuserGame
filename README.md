@@ -30,18 +30,27 @@ Game Rules:
 
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/Warriors.png)
 
+![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0001.jpg)
 
+![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0002.jpg)
+
+![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0003.jpg)
+
+![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0004.jpg)
+
+![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0005.jpg)
 Features Implemented:
 1.	**Multiple puzzle modules**: The game includes four different puzzle modules, each with its own set of instructions and rules.
 2.	**Randomization**: Each time the game is played, the puzzle modules are randomly composited in a new way, 
     which adds an element of unpredictability and increases replayability.
-3.	**Time limit**: The game has a time limit of 120 seconds, which adds an element of urgency and encourages players to solve 
+3. **File input/output**: Players' names and scores are saved into save.txt for ranking. Player can use Makefile to clean the data.
+4.	**Time limit**: The game has a time limit of 120 seconds, which adds an element of urgency and encourages players to solve 
     the puzzles as quickly and efficiently as possible.
-4.	**Penalty for incorrect guesses**: Incorrect guesses result in a penalty of 5 seconds, 
+5.	**Penalty for incorrect guesses**: Incorrect guesses result in a penalty of 5 seconds, 
     which incentivizes players to carefully consider their options before making a guess.
-5.	**Scoring system**: The game likely includes a scoring system that 
-    awards points based on how quickly and accurately the puzzles are solved.
-6.	**Challenging gameplay**: The game is designed to be challenging and engaging, requiring players to use 
+6.	**Scoring system**: The game includes a scoring system that awards points based on
+    how quickly and accurately the puzzles are solved.
+7.	**Challenging gameplay**: The game is designed to be challenging and engaging, requiring players to use 
     critical thinking, logic, and problem-solving skills to defuse the bomb before time runs out.
 
 Compilation and Execution instruction:
