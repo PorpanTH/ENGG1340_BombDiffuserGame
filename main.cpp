@@ -38,6 +38,12 @@ int main(){
     start_game(info);
     auto start_time = chrono::steady_clock::now();
     auto end_time = start_time + chrono::seconds(120);
+    cout << R"(
+   ___  _ ______             ___       ___             __
+  / _ \(_) _/ _/_ _____ ___ / _ \___ _/ _ )___  __ _  / /
+ / // / / _/ _/ // (_-</ -_) // / _ `/ _  / _ \/  ' \/ _ \
+/____/_/_//_/ \_,_/___/\__/____/\_,_/____/\___/_/_/_/_.__/
+                                                          )"<<endl;
     while (chrono::steady_clock::now() < end_time) {
         this_thread::sleep_for(chrono::milliseconds(10));
         //add game implementation
