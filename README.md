@@ -33,17 +33,10 @@ $ ./game
 
 Game Rules:
 180seconds, 5seconds deducted after each incorrect input
-
-![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/Warriors.png)
-
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0001.jpg)
-
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0002.jpg)
-
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0003.jpg)
-
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0004.jpg)
-
 ![image](https://github.com/PorpanTH/ENGG1340_BombDiffuserGame/blob/main/instru_image/ENGG1340%20Project%20PDF%20Clue_page-0005.jpg)
 Features Implemented:
 1.	**Multiple puzzle modules**: The game includes four different puzzle modules, each with its own set of instructions and rules.
